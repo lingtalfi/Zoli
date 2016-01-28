@@ -360,9 +360,11 @@ The example below also uses the rounded flavour provided by the "simple" theme.
 Available themes
 ---------------------- 
 
-So far the available themes are the following: (available flavours are in parenthesis) 
+So far the available themes are the following: (available flavours are in parenthesis, and flavours preceded by the "plus" symbol
+can be combined with other flavours) 
 
-- simple (rounded, dark, dark_blue)
+- simple (dark, dark_blue, +rounded)
+- screen (screen, +red, +rounded)
 
 
 
@@ -370,6 +372,10 @@ So far the available themes are the following: (available flavours are in parent
 
 History Log
 ------------------
+    
+- 1.2.0 -- 2016-01-28
+
+    - add "screen" theme
     
 - 1.1.0 -- 2016-01-28
 
