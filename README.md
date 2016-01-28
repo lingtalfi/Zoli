@@ -366,7 +366,7 @@ can be combined with other flavours)
 - simple (dark, dark_blue, +rounded)
 - screen (screen, +red, +rounded)
 
-![screen theme](http://s19.postimg.org/q2oefiw2r/zolipop_theme_screen.png)
+![screen theme](http://s19.postimg.org/q2oefiw2r/zolipop_theme_screen.png "screen theme")
 
 
 
