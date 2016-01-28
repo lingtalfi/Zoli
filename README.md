@@ -13,8 +13,10 @@ zoli can be installed as a [planet](https://github.com/lingtalfi/Observer/blob/m
 It depends on jquery;
 
 
+It was developed for chrome/firefox browsers.
 
 
+![zoli popup](http://s19.postimg.org/tttdo3kdf/Capture_d_e_cran_2016_01_28_a_21_51_20.png)
 
 
 
@@ -283,10 +285,96 @@ ZolipopDraggable plugin options
 
 
 
+Styling popups
+-----------------
+
+It's a common practice to have dialogs with a title bar containing a close button,
+and, when needed, a bottom bar that contains the dialog buttons.
+
+In order to optimize the designing work, I will suggest that we build css on the following markup.
+ 
+ 
+```html
+<div id="the_popup" class="zolipop_box">
+    <div class="top_bar zolipop_draggable_handle">
+        <span class="title">Proud title</span>
+        <span class="close_button zolipop_close">X</span>
+    </div>
+
+    <div class="body">
+        Do I look better now?
+    </div>
+
+    <div class="bottom_bar">
+        <div class="button">Ok</div>
+        <div class="button">Cancel</div>
+    </div>
+</div>
+
+``` 
+
+
+So if you want to use a zolipop box into your page, copy paste the code, then remove what you don't need (for instance the buttons).
+Then, include a css style.
+
+Notes: 
+- the zolipop_draggable_handle class will make the popup draggable by its "top bar"; it depends on the zolipop draggable plugin.
+- the zolipop_close class is the default class that closes the popup when the user clicks on it.
+
+
+### Using flavours in your themes
+
+If you create a new css theme for this plugin, first of all, pull requests are welcome, but then 
+you might want to add flavours to your theme.
+ 
+A flavour is just a slightly different variation of your main theme style.
+Typically, the colors, or the roundness of borders are criterion that will vary from a flavour to another.
+  
+Flavour should be css classes that you apply on the zolipop_box element.
+
+
+Here is how one can use the simple theme's dark flavour (which is flavour represented on the image at the top).
+The example below also uses the rounded flavour provided by the "simple" theme.
+
+```html 
+<div id="the_popup" class="zolipop_box dark rounded">
+    <div class="top_bar zolipop_draggable_handle">
+        <span class="title">Proud title</span>
+        <span class="close_button zolipop_close">X</span>
+    </div>
+
+    <div class="body">
+        Do I look better now?
+    </div>
+
+    <div class="bottom_bar">
+        <div class="button">Ok</div>
+        <div class="button">Cancel</div>
+    </div>
+</div>
+
+```
+
+
+
+Available themes
+---------------------- 
+
+So far the available themes are the following: (available flavours are in parenthesis) 
+
+- simple (rounded, dark, dark_blue)
+
+
+
 
 
 History Log
 ------------------
+    
+- 1.1.0 -- 2016-01-28
+
+    - add "simple" theme
+    
     
 - 1.0.0 -- 2016-01-28
 
