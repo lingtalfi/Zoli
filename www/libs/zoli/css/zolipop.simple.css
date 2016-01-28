@@ -23,7 +23,7 @@
 }
 
 .zolipop_box .top_bar .close_button {
-    margin-right: 1vw;
+    margin-right: 5px;
     cursor: pointer;
     border-width: 1px;
     border-style: solid;

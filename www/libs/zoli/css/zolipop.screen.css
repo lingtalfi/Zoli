@@ -21,16 +21,15 @@
 }
 
 .zolipop_box .top_bar .close_button {
-    margin-right: 1vw;
+    margin-right: 5px;
+    margin-top: 2px;
     cursor: pointer;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 50%;
+    border-radius: 5px;
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     text-align: center;
-    font-family: verdana;
+    font-family: fantasy, arial, verdana;
     font-size: 12px;
     line-height: 21px;
 
@@ -84,13 +83,11 @@
 
 
 .zolipop_box.screen .top_bar .close_button {
-    background-color: #222;
-    border-color: #999;
+    background: linear-gradient(to bottom, #dd1414, #af1414, #dd1414);
 }
 
 .zolipop_box.screen .top_bar .close_button:hover {
-    color: #222;
-    background-color:#999;
+    background: linear-gradient(to bottom, #fd1414, #cf1414, #fd1414);
 }
 
 
