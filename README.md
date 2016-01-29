@@ -315,7 +315,16 @@ In order to optimize the designing work, I will suggest that we build css on the
 
 
 So if you want to use a zolipop box into your page, copy paste the code, then remove what you don't need (for instance the buttons).
-Then, include a css style.
+Then, include a css style. Your header might look something like this:
+
+```html
+<script src="/libs/zoli/js/zolipop.js"></script>
+<script src="/libs/zoli/js/zolipop.draggable.js"></script>
+<link rel="stylesheet" href="/libs/zoli/css/zolipop.screen.css">
+```
+
+
+
 
 Notes: 
 - the zolipop_draggable_handle class will make the popup draggable by its "top bar"; it depends on the zolipop draggable plugin.
