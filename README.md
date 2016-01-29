@@ -128,7 +128,7 @@ zolipop instance options
 
 ```js
 {
-    //------------------------------------------------------------------------------/
+   //------------------------------------------------------------------------------/
     // REQUIRED
     //------------------------------------------------------------------------------/
     /**
@@ -158,9 +158,18 @@ zolipop instance options
     /**
      * An array of plugins.
      * A plugin can hook with the zolipop plugin using a few methods:
+     *
+     * - init ( jPopup )
+     *          The first need for this method was to implement the draggable behaviour.
      * 
-     * - init ( jPopup ) 
-     * 
+     * - preparePopup ( jPopup, openOptions )
+     *          is called during the preparation of the popup,
+     *          every time a popup is about to show up,
+     *          and very early, before the popup is even appended to the overlay.
+     *          
+     *          The first need for this method was for updating title, buttons on a popup 
+     *          of type dialog.
+     *
      */
     plugins: []
 }
