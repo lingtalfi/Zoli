@@ -1,9 +1,13 @@
 /*******************************
 // FUNCTIONAL
 *******************************/
+/** 
+http://jsfiddle.net/MadLittleMods/LmYay/  
+*/
 .zolipop_box {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .zolipop_box .top_bar {

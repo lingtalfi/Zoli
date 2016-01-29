@@ -51,13 +51,13 @@
              *
              * - init ( jPopup )
              *          The first need for this method was to implement the draggable behaviour.
-             * 
+             *
              * - preparePopup ( jPopup, openOptions )
              *          is called during the preparation of the popup,
              *          every time a popup is about to show up,
              *          and very early, before the popup is even appended to the overlay.
-             *          
-             *          The first need for this method was for updating title, buttons on a popup 
+             *
+             *          The first need for this method was for updating title, buttons on a popup
              *          of type dialog.
              *
              */
@@ -204,18 +204,26 @@
                 /**
                  * Auto-centering the popup
                  */
-                var w = jPopup.width();
-                var h = jPopup.height();
+                function reposition() {
+                    var w = jPopup.width();
+                    var h = jPopup.height();
+                    jPopup.css({
+                        position: 'absolute',
+                        left: '50%',
+                        top: '50%',
+                        marginLeft: '-' + w / 2 + 'px',
+                        marginTop: '-' + h / 2 + 'px'
+                    });
+                }
 
-                jPopup.css({
-                    position: 'absolute',
-                    left: '50%',
-                    top: '50%',
-                    marginLeft: '-' + w / 2 + 'px',
-                    marginTop: '-' + h / 2 + 'px'
-                });
+                $(window)
+                    .off('resize.zolipop_center')
+                    .on('resize.zolipop_center', reposition);
+                reposition();
+
             }
             else {
+
                 var dims = oo.position();
                 if (null !== dims) {
                     if (null !== dims[0]) {
