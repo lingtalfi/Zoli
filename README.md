@@ -379,8 +379,40 @@ can be combined with other flavours)
 
 
 
+
+
+Available plugins
+--------------------
+
+### Draggable 
+2016-01-28
+
+Make the zolipopup draggable.
+
+
+### Dialog helper 
+2016-01-29
+
+Help opening a zolipopup with a title and/or buttons.
+
+
+### Dialog body inserts
+ 2016-01-29
+
+Help preparing the zolipopup as a template before it shows up.
+
+
+
+
+
+
 History Log
 ------------------
+    
+- 1.3.0 -- 2016-01-29
+
+    - add dialog_helper and dialog_body_inserts plugins
+    
     
 - 1.2.0 -- 2016-01-28
 

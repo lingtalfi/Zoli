@@ -48,9 +48,18 @@
             /**
              * An array of plugins.
              * A plugin can hook with the zolipop plugin using a few methods:
+             *
+             * - init ( jPopup )
+             *          The first need for this method was to implement the draggable behaviour.
              * 
-             * - init ( jPopup ) 
-             * 
+             * - preparePopup ( jPopup, openOptions )
+             *          is called during the preparation of the popup,
+             *          every time a popup is about to show up,
+             *          and very early, before the popup is even appended to the overlay.
+             *          
+             *          The first need for this method was for updating title, buttons on a popup 
+             *          of type dialog.
+             *
              */
             plugins: []
         };
@@ -85,7 +94,7 @@
                  *              passed to the jquery.css property.
                  *              Use null to skip one or both of the properties.
                  *              If you use one of those properties, the popup element will be absolute positioned.
-                 *              
+                 *
                  *              Developer Note: it's easy to add marginLeft and marginTop argument behind the width and height...
                  *
                  *              You can also return null and handle the positioning yourself.
@@ -102,9 +111,11 @@
         /**
          * args must be an array []
          */
-        function callPlugins(method, args){
-            for(var i in d.plugins){
-                d.plugins[i][method].apply(d.plugins[i][method], args);
+        function callPlugins(method, args) {
+            for (var i in d.plugins) {
+                if (method  in d.plugins[i]) {
+                    d.plugins[i][method].apply(d.plugins[i][method], args);
+                }
             }
         }
 
@@ -160,6 +171,12 @@
              * Hide any existing overlay content.
              */
             jOverlay.find('> *').hide();
+
+
+            /**
+             * Now prepare the popup
+             */
+            callPlugins('preparePopup', [jPopup, oo]);
             jOverlay.append(jPopup);
 
 
