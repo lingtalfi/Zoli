@@ -384,6 +384,9 @@ can be combined with other flavours)
 Available plugins
 --------------------
 
+For all plugins, please browse the source code comments for documentation.
+
+
 ### Draggable 
 2016-01-28
 
