@@ -412,6 +412,10 @@ Help preparing the zolipopup as a template before it shows up.
 History Log
 ------------------
     
+- 1.4.0 -- 2016-01-29
+
+    - change default overlay z-index to 100 instead of 1 
+    
 - 1.3.0 -- 2016-01-29
 
     - add dialog_helper and dialog_body_inserts plugins
