@@ -1,4 +1,4 @@
-Zolipop
+Zoli
 ===========
 2016-01-28
 
@@ -6,7 +6,15 @@ Zolipop
 a modal dialog.
 
 
-zoli can be installed as a [planet](https://github.com/lingtalfi/Observer/blob/master/article/article.planetReference.eng.md).
+Zoli is part of the [universe framework](https://github.com/karayabin/universe-snapshot).
+
+
+Install
+==========
+Using the [uni](https://github.com/lingtalfi/universe-naive-importer) command.
+```bash
+uni import Zoli
+```
 
 
 
